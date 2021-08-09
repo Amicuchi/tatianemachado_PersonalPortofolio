@@ -16,7 +16,6 @@ $(document).ready(function(){
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
     });
-    
 
     // Toggle menu/navbar script
     $('.menu-btn').click(function(){
@@ -26,17 +25,18 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing", {
-        strings: ["YouTuber",  "Developer", "Designer", "Blogger", "Freelancer"],
+        strings: ["Administradora", "Organizadora",  "Secretária", "Freelancer", "Esposa", "Mãe"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
     var typed2 = new Typed(".typing2", {
-        strings: ["YouTuber",  "Developer", "Designer", "Blogger", "Freelancer"],
+        strings: ["Administradora", "Organizadora",  "Secretária", "Freelancer", "Esposa", "Mãe"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
+
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
@@ -58,5 +58,4 @@ $(document).ready(function(){
             }
         }
     });
-
 });
