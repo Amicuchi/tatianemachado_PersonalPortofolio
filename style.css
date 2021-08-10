@@ -391,19 +391,19 @@ footer{
     top: 0;
     background: var(--main-color);
 }
-.skills .skills-content .right .html::before{
-    width: 90%;
+.skills .skills-content .right .info1::before{
+    width: 75%;
 }
-.skills .skills-content .right .css::before{
+.skills .skills-content .right .info2::before{
     width: 70%;
 }
-.skills .skills-content .right .js::before{
-    width: 40%;
+.skills .skills-content .right .info3::before{
+    width: 70%;
 }
-.skills .skills-content .right .react::before{
-    width: 20%;
+.skills .skills-content .right .info4::before{
+    width: 90%;
 }
-.skills .skills-content .right .github::before{
+.skills .skills-content .right .info5::before{
     width: 50%;
 }
 
@@ -411,6 +411,10 @@ footer{
 /* ******************** */
 /* team section styling */
 /* ******************** */
+.team p{
+    text-align: center;
+    margin-bottom: 20px;
+}
 .team .carousel .card{
     background: var(--dark-02);
     border-radius: 6px;
@@ -427,6 +431,7 @@ footer{
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    height: 400px;
 }
 .team .carousel .card:hover .box{
     transform: scale(1.05);
