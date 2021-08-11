@@ -55,6 +55,7 @@
         referrerpolicy="no-referrer"
     ></script>
 </head>
+
 <body>
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -83,7 +84,7 @@
                 <div class="text-1">Olá, meu nome é</div>
                 <div class="text-2">Tatiane Machado</div>
                 <div class="text-3">e eu sou uma <span class="typing"></span></div>
-                <a href="#">Contrate-me</a>
+                <a href="#contact">Contrate-me</a>
             </div>
         </div>
     </section>
@@ -234,7 +235,7 @@
                     <div class="box">
                         <img src="./img/anderson.png" alt="" />
                         <div class="text">Marido</div>
-                        <p>Ele também tem se dedicado a mudança de carreira, na expectativa de poder passar mais tempo com o Davi e a proporcionar uma qualidade de vida melhor para todos nós. Sem ele ao meu lado, não sei como seria.</p>
+                        <p>Tem sido meu companheiro e grande incentivador. <br /> Sem ele ao meu lado, não sei como seria.</p>
                     </div>
                 </div>
 
@@ -291,7 +292,7 @@
                         <div class="row">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
-                                <div class="sub-title">TatianeMachado@gmail.com</div>
+                                <div class="sub-title">TatiMachadoCastro@gmail.com</div>
                             </div>
                         </div>
                     </div>
@@ -299,27 +300,39 @@
 
                 <div class="colum right">
                     <div class="text">Mande uma mensagem</div>
-                    <form action="#">
+                    <form action="https://api.staticforms.xyz/submit" method="POST">
+                        <!-- AccessKey é uma chave de acesso à API do site de envio de emails.
+                             Cada usuário terá uma chave diferente, sendo necessário um novo cadastro para cada usuário. 
+                             Para gerar uma nova chave da API, basta acessar o site staticforms.xyz -->
+                        <input type="hidden" name="accessKey" value="41f4c269-0c4a-4ae3-a3d8-06497e05bdf0">
+                        
+                        <!-- O input redirectTo, redireciona o usuário para uma página de sucesso. -->
+                        <input type="hidden" name="redirectTo" id="enviado" value="https://tatianemachado.netlify.app/">
+
+                        <!-- For spam protection add following field -->
+                        <input type="text" name="honeypot" style="display: none;">
+
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Nome" required>
+                                <input name="name" type="text" placeholder="Nome" required>
                             </div>
                             <div class="field email">
-                                <input type="text" placeholder="E-mail" required>
+                                <input name="email" type="text" placeholder="E-mail" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="subject" placeholder="Assunto" required>
+                            <input name="subject" type="subject" placeholder="Assunto" required>
                         </div>
                         <div class="field textarea">
                             <textarea 
+                                name="message"
                                 cols="30" 
                                 rows="10" placeholder="Descreva seu projeto"
                                 required
                             ></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Enviar</button>
+                            <button type="submit" id="enviar" >Enviar</button>
                         </div>
                     </form>
                 </div>

@@ -431,10 +431,13 @@ footer{
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    height: 400px;
+    height: 440px;
 }
 .team .carousel .card:hover .box{
     transform: scale(1.05);
+}
+.team .carousel .card .box p{
+    text-align: justify;
 }
 .team .carousel .card .text{
     font-size: 25px;
@@ -634,6 +637,9 @@ footer span a:hover{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+    .home{
+        background: var(--dark-00);
     }
     .home .max-width{
         margin: auto 0;
